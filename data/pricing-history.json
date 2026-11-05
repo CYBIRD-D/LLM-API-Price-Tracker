@@ -329,6 +329,20 @@
         "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
       },
       "note": "Catalog change; Mistral announced new price October 29, 2026."
+    },
+    {
+      "recorded_at_utc": "2026-11-05T00:00:00Z",
+      "price_id": "tencent-openrouter--hy4",
+      "old": null,
+      "new": {
+        "input": 0.834,
+        "cached_input": 0.042,
+        "output": 2.501,
+        "rate_type": "standard",
+        "notes": "OpenRouter undiscounted list price; currently 50% off ($0.417 input / $0.021 cache / $1.251 output); 1.05M context",
+        "pricing_source": "https://openrouter.ai/tencent/hy4"
+      },
+      "note": "Added normal OpenRouter list price to local catalog; not an announcement of a new rate."
     }
   ]
 }

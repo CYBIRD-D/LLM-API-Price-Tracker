@@ -1598,7 +1598,36 @@
       "promo_ends_on": null,
       "data_policy": "standard_or_unspecified",
       "time_tier_utc": null
+    },
+    {
+      "id": "tencent-openrouter--hy4",
+      "label": "Hy4",
+      "model_ids": [
+        "tencent-openrouter--hy4"
+      ],
+      "input": 0.834,
+      "cached_input": 0.042,
+      "output": 2.501,
+      "rate_type": "standard",
+      "notes": "OpenRouter undiscounted list price; currently 50% off ($0.417 input / $0.021 cache / $1.251 output); 1.05M context",
+      "pricing_source": "https://openrouter.ai/tencent/hy4",
+      "pricing_verified_at": "2026-11-05",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "pricing_basis": "undiscounted_list_price",
+      "current_promotion": {
+        "description": "OpenRouter displays 50% off via Tencent Cloud",
+        "input": 0.417,
+        "cached_input": 0.021,
+        "output": 1.251,
+        "as_of": "2026-11-05"
+      },
+      "underlying_provider": "Tencent Cloud via OpenRouter"
     }
   ],
-  "last_updated": "2026-10-30"
+  "last_updated": "2026-11-05"
 }

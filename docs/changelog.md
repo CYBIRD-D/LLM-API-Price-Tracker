@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-05 — Add Tencent Hy4 (OpenRouter normal price)
+
+- Added **Tencent Hy4** as one OpenRouter-hosted API record, ID `tencent/hy4`, **Closed** until the final-release weights are actually downloadable. Preview weights are not the same release.
+- Ranked its **normal (undiscounted) OpenRouter list price**, with the plain model name `Hy4` — **$0.834 input / $0.042 cached input / $2.501 output**, combined **$3.335** per million tokens.
+- OpenRouter currently advertises a **50% off** Tencent Cloud route ($0.417/$0.021/$1.251, input/cache/output). Mentioned the discount in Notes and structured metadata only; no separate Promo or Regular Price leaderboard row.
+- Added Tencent Cloud's model specification (770B total / 49B active), API source, price history, source watch, and automated checks. All existing providers' prices remain untouched.
+
 ## 2026-10-30 — Mistral Large 4 public model and GPT-6.1 Terra
 
 - Changed **Mistral Large 4** to **Open**: Mistral released official downloadable FP8 and NVFP4 files October 29. Updated parameters to **1.05T / 52B active** (49B core-active) and recorded the Mistral Ecosystem Open-Weight License v26.10.

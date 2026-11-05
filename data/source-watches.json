@@ -86,6 +86,14 @@
         "M3.1 Flash",
         "0.15"
       ]
+    },
+    {
+      "name": "Tencent Hy4 price on OpenRouter",
+      "url": "https://openrouter.ai/tencent/hy4",
+      "patterns": [
+        "Hy4",
+        "Tencent"
+      ]
     }
   ]
 }

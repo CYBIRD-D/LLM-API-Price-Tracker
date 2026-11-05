@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-10-30**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-11-05**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -189,6 +189,20 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual((t['min_prompt_tokens'],t['max_prompt_tokens']),(272001,1050000))
         self.assertEqual((t['input'],t['cached_input'],t['output']),(2,0.1,7.5))
         self.assertIn('| OpenAI | GPT-6.1 Terra | Closed |',make_table())
+
+    def test_hy4_openrouter_undiscounted_price(self):
+        model=self.models['tencent-openrouter--hy4']
+        self.assertEqual(model['name'],'Hy4')
+        self.assertEqual(model['openness'],'Closed')
+        self.assertEqual((model['total_parameters_b'],model['active_parameters_b']),(770,49))
+        self.assertEqual(model['api_model_id'],'tencent/hy4')
+        rate=next(r for r in self.rates if r['id']==model['id'])
+        self.assertEqual(rate['label'],'Hy4')
+        self.assertEqual(rate['rate_type'],'standard')
+        self.assertEqual((rate['input'],rate['cached_input'],rate['output']),(0.834,0.042,2.501))
+        self.assertEqual(rate['pricing_basis'],'undiscounted_list_price')
+        self.assertEqual(rate['current_promotion']['input'],0.417)
+        self.assertIn('| Tencent / OpenRouter | Hy4 | Closed |',make_table())
 
     def test_table_row_count(self):
         table=make_table()

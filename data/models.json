@@ -1284,6 +1284,24 @@
       "openness_note": "No downloadable GPT-6.1 Terra checkpoint publicly released.",
       "openness_source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
       "release_date": "2026-10-26"
+    },
+    {
+      "id": "tencent-openrouter--hy4",
+      "name": "Hy4",
+      "provider": "Tencent / OpenRouter",
+      "license": null,
+      "total_parameters_b": 770,
+      "active_parameters_b": 49,
+      "architecture": "MoE",
+      "parameter_source": "https://developer.cloud.tencent.com/article/2776227",
+      "parameter_notes": "770B total / 49B active are cited in Tencent Cloud's Nov 4 release coverage; the final Hy4 model card and matching downloadable weights were not yet publicly available when checked Nov 5. Do not substitute open Hy4 Preview weights for final Hy4. Context 1,048,576 tokens, max output 65,536; image/text input, text output.",
+      "metadata_verified_at": "2026-11-05",
+      "api_model_id": "tencent/hy4",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "Hy4 official weights/system card planned but not yet verifiably downloadable. Hy4 Preview weights are open, but represent a different version.",
+      "openness_source": "https://www.tencent.com/",
+      "release_date": "2026-11-04"
     }
   ]
 }
