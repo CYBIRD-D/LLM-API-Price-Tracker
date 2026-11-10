@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-10 — Claude Fable 5.2 and Muse Ember
+
+- Added **Claude Fable 5.2**, released November 9, as **Closed**; no parameter count is officially disclosed. Official standard Claude API rate: **$8 input / $0.20 cache read / $40 output per million tokens**, combined **$48**. Recorded $10 (5-minute) / $16 (1-hour) cache-write rates and optional $16/$80 Fast serving prices as separate metadata, not leaderboard rate rows.
+- **No temporary API promo price** has been created for Fable 5.2. Anthropic's one-week launch benefits are for eligible Claude subscriptions/usage allowances, not a lower per-token API rate.
+- Added **Meta Muse Ember**, released November 9, as **Closed**, undisclosed parameters; official Meta Model API costs **$0.10 input / $0.004 cache read / $0.50 output**, combined **$0.60**, for up to 200K input tokens.
+- Recorded **Muse Ember's >200K prompt tier**: $0.30 input / $0.012 cached input / $1.50 output per million tokens for the **entire request**, not just the overage; official 1M context and 512K max output.
+- Refreshed sorted README table, model catalog, sources and price-history baseline. No existing prices or models were changed.
+
 ## 2026-11-05 — Add Tencent Hy4 (OpenRouter normal price)
 
 - Added **Tencent Hy4** as one OpenRouter-hosted API record, ID `tencent/hy4`, **Closed** until the final-release weights are actually downloadable. Preview weights are not the same release.

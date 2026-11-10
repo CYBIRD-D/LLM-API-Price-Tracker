@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-11-05**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-11-10**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -203,6 +203,30 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(rate['pricing_basis'],'undiscounted_list_price')
         self.assertEqual(rate['current_promotion']['input'],0.417)
         self.assertIn('| Tencent / OpenRouter | Hy4 | Closed |',make_table())
+
+    def test_fable52_and_muse_ember(self):
+        rates={r['id']:r for r in self.rates}
+        fable=self.models['anthropic--claude-fable-5-2']
+        self.assertEqual(fable['api_model_id'],'claude-fable-5-2')
+        self.assertEqual(fable['openness'],'Closed')
+        self.assertIsNone(fable['total_parameters_b'])
+        f=rates['anthropic--claude-fable-5-2']
+        self.assertEqual((f['input'],f['cached_input'],f['output']),(8,0.20,40))
+        self.assertEqual(f['rate_type'],'standard')
+        self.assertEqual(f['cache_write_5m'],10)
+        self.assertEqual(f['cache_write_1h'],16)
+        self.assertEqual(f['fast_mode']['output'],80)
+        self.assertNotIn('Promo',f['label'])
+        ember=self.models['meta--muse-ember-1-0']
+        self.assertEqual(ember['api_model_id'],'muse-ember-1.0')
+        self.assertEqual(ember['openness'],'Closed')
+        self.assertIsNone(ember['total_parameters_b'])
+        e=rates['meta--muse-ember-1-0']
+        self.assertEqual((e['input'],e['cached_input'],e['output']),(0.10,0.004,0.50))
+        self.assertEqual(e['context_tiers'][0]['min_prompt_tokens'],200001)
+        self.assertEqual((e['context_tiers'][0]['input'],e['context_tiers'][0]['cached_input'],e['context_tiers'][0]['output']),(0.30,0.012,1.50))
+        self.assertIn('| Meta | Muse Ember | Closed |',make_table())
+        self.assertIn('| Anthropic | Claude Fable 5.2 | Closed |',make_table())
 
     def test_table_row_count(self):
         table=make_table()

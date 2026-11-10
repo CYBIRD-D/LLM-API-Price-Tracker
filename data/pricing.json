@@ -1627,7 +1627,64 @@
         "as_of": "2026-11-05"
       },
       "underlying_provider": "Tencent Cloud via OpenRouter"
+    },
+    {
+      "id": "anthropic--claude-fable-5-2",
+      "label": "Claude Fable 5.2",
+      "model_ids": [
+        "anthropic--claude-fable-5-2"
+      ],
+      "input": 8,
+      "cached_input": 0.2,
+      "output": 40,
+      "rate_type": "standard",
+      "notes": "1M context; 5m/1h cache writes $10/$16; optional Fast mode $16 input / $80 output; standard API price, no promo",
+      "pricing_source": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2",
+      "pricing_verified_at": "2026-11-10",
+      "pricing_review": "source_checked",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write_5m": 10,
+      "cache_write_1h": 16,
+      "fast_mode": {
+        "input": 16,
+        "output": 80
+      },
+      "launch_offer_kind": "claude_subscription_usage_only_not_api_discount"
+    },
+    {
+      "id": "meta--muse-ember-1-0",
+      "label": "Muse Ember",
+      "model_ids": [
+        "meta--muse-ember-1-0"
+      ],
+      "input": 0.1,
+      "cached_input": 0.004,
+      "output": 0.5,
+      "rate_type": "standard",
+      "notes": "1M context; up to 200K input; >200K: $0.30 input / $0.012 cache / $1.50 output (whole request)",
+      "pricing_source": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "pricing_verified_at": "2026-11-10",
+      "pricing_review": "source_checked",
+      "context_tiers": [
+        {
+          "min_prompt_tokens": 200001,
+          "max_prompt_tokens": 1048576,
+          "input": 0.3,
+          "cached_input": 0.012,
+          "output": 1.5
+        }
+      ],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "api_surface": "Meta Model API",
+      "max_output_tokens": 524288
     }
   ],
-  "last_updated": "2026-11-05"
+  "last_updated": "2026-11-10"
 }

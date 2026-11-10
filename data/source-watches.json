@@ -94,6 +94,22 @@
         "Hy4",
         "Tencent"
       ]
+    },
+    {
+      "name": "Anthropic Claude Fable 5.2 model pricing",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2",
+      "patterns": [
+        "$8",
+        "$40"
+      ]
+    },
+    {
+      "name": "Meta Model API pricing including Muse Ember",
+      "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+      "patterns": [
+        "Muse Ember",
+        "$0.004"
+      ]
     }
   ]
 }

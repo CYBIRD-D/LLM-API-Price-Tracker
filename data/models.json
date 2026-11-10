@@ -1302,6 +1302,42 @@
       "openness_note": "Hy4 official weights/system card planned but not yet verifiably downloadable. Hy4 Preview weights are open, but represent a different version.",
       "openness_source": "https://www.tencent.com/",
       "release_date": "2026-11-04"
+    },
+    {
+      "id": "anthropic--claude-fable-5-2",
+      "name": "Claude Fable 5.2",
+      "provider": "Anthropic",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": null,
+      "parameter_source": null,
+      "parameter_notes": "Released November 9, 2026. 1M-token context, 128K maximum output; adaptive thinking always enabled. Parameter counts and downloadable weights undisclosed; Anthropic does not publish this checkpoint. The one-week Claude subscription launch offer is NOT an API token-price promotion.",
+      "metadata_verified_at": "2026-11-10",
+      "api_model_id": "claude-fable-5-2",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "No publicly downloadable model weights verified.",
+      "openness_source": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+      "release_date": "2026-11-09"
+    },
+    {
+      "id": "meta--muse-ember-1-0",
+      "name": "Muse Ember",
+      "provider": "Meta",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": null,
+      "parameter_source": null,
+      "parameter_notes": "Released November 9, 2026, Meta's small multimodal agentic execution model. Input text/image/audio/video/PDF, text output; 1,048,576 context, 524,288 max output. No official parameter-count disclosure or matching downloadable weights verified.",
+      "metadata_verified_at": "2026-11-10",
+      "api_model_id": "muse-ember-1.0",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "Meta offers hosted API access; no creator-published downloadable Muse Ember checkpoint verified.",
+      "openness_source": "https://dev.meta.ai/docs/muse-ember",
+      "release_date": "2026-11-09"
     }
   ]
 }

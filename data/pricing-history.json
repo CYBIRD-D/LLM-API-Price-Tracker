@@ -343,6 +343,34 @@
         "pricing_source": "https://openrouter.ai/tencent/hy4"
       },
       "note": "Added normal OpenRouter list price to local catalog; not an announcement of a new rate."
+    },
+    {
+      "recorded_at_utc": "2026-11-10T02:52:07Z",
+      "price_id": "anthropic--claude-fable-5-2",
+      "old": null,
+      "new": {
+        "input": 8,
+        "cached_input": 0.2,
+        "output": 40,
+        "rate_type": "standard",
+        "notes": "1M context; 5m/1h cache writes $10/$16; optional Fast mode $16 input / $80 output; standard API price, no promo",
+        "pricing_source": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2"
+      },
+      "note": "New release added to local catalog; not a claim about price changes in existing models."
+    },
+    {
+      "recorded_at_utc": "2026-11-10T02:52:07Z",
+      "price_id": "meta--muse-ember-1-0",
+      "old": null,
+      "new": {
+        "input": 0.1,
+        "cached_input": 0.004,
+        "output": 0.5,
+        "rate_type": "standard",
+        "notes": "1M context; up to 200K input; >200K: $0.30 input / $0.012 cache / $1.50 output (whole request)",
+        "pricing_source": "https://dev.meta.ai/docs/pricing-rate-limits"
+      },
+      "note": "New release added to local catalog; not a claim about price changes in existing models."
     }
   ]
 }
