@@ -19,6 +19,14 @@ Compare AI API prices from OpenAI, Anthropic, Google, xAI, Qwen, DeepSeek, Kimi,
 
 The cheapest **Combined** price comes first. Ties use the cheaper confirmed cached-input price. Promotional and regular prices (including future prices), plus peak/off-peak rates, get separate rows.
 
+<details>
+<summary>
+  
+  ### Extra Note
+  
+</summary>
+
+
 **Google update:** Gemini 3.5 Flash and 3.7 Flash were deprecated on October 8, 2026. Requests to those names now use Gemini 3.6 Flash and 3.8 Flash respectively, so the old standalone prices are no longer ranked. They remain documented in the model catalog.
 
 **New releases:** Muse Spark Open is a separate, publicly downloadable release. It shares the Muse Spark 1.3 base model but isn't confirmed identical to either hosted Muse Spark 1.2 or 1.3. DeepSeek V4.1 Flash 1017 replaces the older revision on the same `deepseek-flash` API alias, with unchanged token rates.
@@ -28,6 +36,8 @@ The cheapest **Combined** price comes first. Ties use the cheaper confirmed cach
 **Faster service isn't always a new model.** Kimi K2.7 Code HighSpeed is the same open model served faster for more money. GLM-5-Turbo was separately optimized during training for agent tasks; we cannot assume it uses exactly the same public files as GLM-5.
 
 More detail: [How the numbers are collected](docs/methodology.md) · [Suggest a correction](CONTRIBUTING.md)
+
+</details>
 
 ## Price leaderboard
 <!-- CATALOG:START -->
