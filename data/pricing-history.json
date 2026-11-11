@@ -371,6 +371,20 @@
         "pricing_source": "https://dev.meta.ai/docs/pricing-rate-limits"
       },
       "note": "New release added to local catalog; not a claim about price changes in existing models."
+    },
+    {
+      "recorded_at_utc": "2026-11-11T09:39:00Z",
+      "price_id": "google--gemini-4-carbon-standard",
+      "old": null,
+      "new": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20,
+        "rate_type": "standard",
+        "notes": "1M context; implicit caching only; standard list price from Dec 1, 2026 (introductory $2/$0.10/$10 through Nov 30, not separately ranked)",
+        "pricing_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+      },
+      "note": "Catalog addition (normal price, not necessarily today's discounted billed price); not an announcement of a price change."
     }
   ]
 }

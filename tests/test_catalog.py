@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-11-10**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-11-11**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -227,6 +227,24 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual((e['context_tiers'][0]['input'],e['context_tiers'][0]['cached_input'],e['context_tiers'][0]['output']),(0.30,0.012,1.50))
         self.assertIn('| Meta | Muse Ember | Closed |',make_table())
         self.assertIn('| Anthropic | Claude Fable 5.2 | Closed |',make_table())
+
+    def test_gemini4_carbon_undiscounted_only(self):
+        model=self.models['google--gemini-4-carbon']
+        self.assertEqual(model['openness'],'Closed')
+        self.assertEqual(model['api_model_id'],'gemini-4-carbon')
+        self.assertIsNone(model['total_parameters_b'])
+        rates=[r for r in self.rates if 'google--gemini-4-carbon' in r['model_ids']]
+        self.assertEqual(len(rates),1)
+        rate=rates[0]
+        self.assertEqual(rate['label'],'Gemini 4 Carbon')
+        self.assertEqual(rate['rate_type'],'standard')
+        self.assertEqual((rate['input'],rate['cached_input'],rate['output']),(4,0.2,20))
+        self.assertEqual(rate['effective_from'],'2026-12-01')
+        self.assertEqual(rate['pricing_basis'],'undiscounted_list_price')
+        self.assertEqual(rate['introductory_rate_not_ranked']['input'],2)
+        self.assertIn('| Google | Gemini 4 Carbon | Closed |',make_table())
+        self.assertNotIn('Gemini 4 Carbon (Promo)',make_table())
+        self.assertNotIn('Gemini 4 Carbon (Regular Price)',make_table())
 
     def test_table_row_count(self):
         table=make_table()

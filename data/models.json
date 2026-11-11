@@ -1338,6 +1338,25 @@
       "openness_note": "Meta offers hosted API access; no creator-published downloadable Muse Ember checkpoint verified.",
       "openness_source": "https://dev.meta.ai/docs/muse-ember",
       "release_date": "2026-11-09"
+    },
+    {
+      "id": "google--gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "provider": "Google",
+      "license": null,
+      "total_parameters_b": null,
+      "active_parameters_b": null,
+      "architecture": null,
+      "parameter_source": null,
+      "parameter_notes": "Google announced Gemini 4 Carbon on October 28, 2026, and launched paid Gemini API access November 10, 2026. 1,048,576-token context, text/image/audio/video/PDF input and text output. Neither total nor active parameters are publicly disclosed.",
+      "metadata_verified_at": "2026-11-11",
+      "api_model_id": "gemini-4-carbon",
+      "api_status": "active",
+      "openness": "Closed",
+      "openness_note": "Google has not published matching downloadable Gemini 4 Carbon weights.",
+      "openness_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "release_date": "2026-11-10",
+      "announcement_date": "2026-10-28"
     }
   ]
 }

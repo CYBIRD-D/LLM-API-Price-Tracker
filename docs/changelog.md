@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-11 — Gemini 4 Carbon (normal list price only)
+
+- Added **Gemini 4 Carbon**, announced October 28, 2026, and publicly launched to paid Gemini API users on November 10 as `gemini-4-carbon`.
+- **Closed**, no public model weights or parameter counts; 1,048,576-token context, multimodal input and text output.
+- As requested, ranked **only the normal undiscounted API list price**: **$4 input / $0.20 cached input / $20 output**, combined **$24** per million input + million output tokens. Label is simply `Gemini 4 Carbon`, with no **Promo** or **Regular Price** suffix.
+- Google currently charges an introductory **$2/$0.10/$10** until November 30, 2026; this is recorded only in the rate Notes and `introductory_rate_not_ranked`, **not** as a second price row. Standard list price takes effect December 1, 2026.
+- Updated generated README, model catalog, price history, source watch, methodology and tests. Other model prices unchanged.
+
 ## 2026-11-10 — Claude Fable 5.2 and Muse Ember
 
 - Added **Claude Fable 5.2**, released November 9, as **Closed**; no parameter count is officially disclosed. Official standard Claude API rate: **$8 input / $0.20 cache read / $40 output per million tokens**, combined **$48**. Recorded $10 (5-minute) / $16 (1-hour) cache-write rates and optional $16/$80 Fast serving prices as separate metadata, not leaderboard rate rows.

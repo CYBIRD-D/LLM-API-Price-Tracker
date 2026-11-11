@@ -110,6 +110,14 @@
         "Muse Ember",
         "$0.004"
       ]
+    },
+    {
+      "name": "Google Gemini 4 Carbon release and list price",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "patterns": [
+        "Gemini 4 Carbon",
+        "November 30"
+      ]
     }
   ]
 }
