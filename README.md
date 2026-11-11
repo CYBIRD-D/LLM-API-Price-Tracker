@@ -1,4 +1,4 @@
-# LLM API Official Pricing Tracker
+# LLM API Pricing Tracker
 
 ## Last updated: **2026-11-10**
 
