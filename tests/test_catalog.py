@@ -79,7 +79,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_readme_has_visible_update_date(self):
         readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
-        self.assertIn('## Last updated: **2026-11-11**', readme.split('<!-- CATALOG:START -->')[0])
+        self.assertIn('## Last updated: **2026-11-18**', readme.split('<!-- CATALOG:START -->')[0])
         self.assertIn('| Kimi | Kimi K2.7 Code Highspeed | Open |', readme)
 
     def test_new_models_and_deprecation(self):
@@ -245,6 +245,42 @@ class CatalogTests(unittest.TestCase):
         self.assertIn('| Google | Gemini 4 Carbon | Closed |',make_table())
         self.assertNotIn('Gemini 4 Carbon (Promo)',make_table())
         self.assertNotIn('Gemini 4 Carbon (Regular Price)',make_table())
+
+    def test_hy4_flash_standard_price_not_promo(self):
+        model=self.models['tencent-openrouter--hy4-flash']
+        self.assertEqual(model['openness'],'Closed')
+        self.assertEqual((model['total_parameters_b'],model['active_parameters_b']),(224,12))
+        self.assertEqual(model['api_model_id'],'tencent/hy4-flash')
+        rate=next(r for r in self.rates if r['id']==model['id'])
+        self.assertEqual(rate['label'],'Hy4 Flash')
+        self.assertEqual(rate['rate_type'],'standard')
+        self.assertEqual((rate['input'],rate['cached_input'],rate['output']),(0.070,0.003,0.281))
+        self.assertEqual(rate['pricing_basis'],'undiscounted_list_price')
+        self.assertEqual((rate['current_promotion']['input'],rate['current_promotion']['cached_input'],rate['current_promotion']['output']),(0.035,0.0015,0.1405))
+        table=make_table()
+        self.assertIn('| Tencent / OpenRouter | Hy4 Flash | Closed |',table)
+        self.assertNotIn('Hy4 Flash (Promo)',table)
+        self.assertNotIn('Hy4 Flash (Regular Price)',table)
+
+    def test_gpt62_astra_sol_standard_and_long_context(self):
+        cases=(('openai--gpt-6-2-astra','gpt-6.2-astra',(8,0.4,40),(16,0.8,60),(10,20)),
+               ('openai--gpt-6-2-sol','gpt-6.2-sol',(2,0.1,10),(4,0.2,15),(2.5,5)))
+        table=make_table()
+        for mid,api_id,short,long,write in cases:
+            model=self.models[mid]
+            self.assertEqual(model['openness'],'Closed')
+            self.assertIsNone(model['total_parameters_b'])
+            self.assertEqual(model['api_model_id'],api_id)
+            price=next(r for r in self.rates if r['id']==mid)
+            self.assertEqual(price['rate_type'],'standard')
+            self.assertEqual((price['input'],price['cached_input'],price['output']),short)
+            self.assertEqual((price['cache_write'],price['cache_write_12h']),write)
+            tier=price['context_tiers'][0]
+            self.assertEqual((tier['min_prompt_tokens'],tier['max_prompt_tokens']),(272001,1050000))
+            self.assertEqual((tier['input'],tier['cached_input'],tier['output']),long)
+            self.assertIn('| OpenAI | '+model['name']+' | Closed |',table)
+        self.assertEqual(len(self.models),85)
+        self.assertEqual(len(self.rates),79)
 
     def test_table_row_count(self):
         table=make_table()

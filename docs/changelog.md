@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-18 — Hy4 Flash and GPT-6.2 Astra / Sol
+
+- Added **Tencent Hy4 Flash** (November 16, 2026): **224B total / 12B active**, including 64B Engram parameters, 1M context and text/image input. Marked **Closed**: Tencent plans to release weights, but no matching official checkpoint is downloadable yet.
+- Ranked **only its undiscounted official USD list price**, $0.070 input / $0.003 cached / $0.281 output, **$0.351 combined** per million input + one million output tokens. The current 50% discount ($0.035/$0.0015/$0.1405) is retained in Notes and metadata, without a Promo or Regular Price row.
+- Added **GPT-6.2 Sol** (November 17, 2026), **Closed**, undisclosed parameters, $2 input / $0.10 cache / $10 output (**$12 combined**). This is the ongoing standard price, the same as GPT-6.1 Sol.
+- Added **GPT-6.2 Astra** (November 17, 2026), **Closed**, undisclosed parameters, $8 input / $0.40 cache / $40 output (**$48 combined**). No temporary promo is involved.
+- Stored long-context (>272K prompt) price tiers for both OpenAI models, 30-minute/12-hour cache-write prices, and Ultrafast mode availability. Did not invent a separate Ultrafast tariff.
+- Regenerated leaderboard/catalog, added sources and price-history entries. All existing records and amounts are unchanged.
+
 ## 2026-11-11 — Gemini 4 Carbon (normal list price only)
 
 - Added **Gemini 4 Carbon**, announced October 28, 2026, and publicly launched to paid Gemini API users on November 10 as `gemini-4-carbon`.

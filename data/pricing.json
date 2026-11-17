@@ -1713,7 +1713,102 @@
         "through": "2026-11-30",
         "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
       }
+    },
+    {
+      "id": "tencent-openrouter--hy4-flash",
+      "label": "Hy4 Flash",
+      "model_ids": [
+        "tencent-openrouter--hy4-flash"
+      ],
+      "input": 0.07,
+      "cached_input": 0.003,
+      "output": 0.281,
+      "pricing_source": "https://cloud.tencent.com/tokenhub/hy4-flash-en",
+      "notes": "Tencent Cloud normal USD list price (also available as tencent/hy4-flash on OpenRouter); 1M context; currently 50% off: $0.035 input / $0.0015 cache / $0.1405 output",
+      "pricing_verified_at": "2026-11-18",
+      "pricing_review": "source_checked",
+      "rate_type": "standard",
+      "context_tiers": [],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "pricing_basis": "undiscounted_list_price",
+      "underlying_provider": "Tencent Cloud via OpenRouter",
+      "current_promotion": {
+        "input": 0.035,
+        "cached_input": 0.0015,
+        "output": 0.1405,
+        "discount": "50%",
+        "source": "https://cloud.tencent.com/tokenhub/hy4-flash-en",
+        "as_of": "2026-11-18"
+      },
+      "openrouter_source": "https://openrouter.ai/tencent/hy4-flash"
+    },
+    {
+      "id": "openai--gpt-6-2-sol",
+      "label": "GPT-6.2 Sol",
+      "model_ids": [
+        "openai--gpt-6-2-sol"
+      ],
+      "input": 2,
+      "cached_input": 0.1,
+      "output": 10,
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+      "notes": "1.05M context; >272K input: $4 input / $0.20 cache / $15 output; cache write (30m/12h): $2.50/$5",
+      "pricing_verified_at": "2026-11-18",
+      "pricing_review": "source_checked",
+      "rate_type": "standard",
+      "context_tiers": [
+        {
+          "min_prompt_tokens": 272001,
+          "max_prompt_tokens": 1050000,
+          "input": 4,
+          "cached_input": 0.2,
+          "output": 15
+        }
+      ],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write": 2.5,
+      "cache_write_12h": 5,
+      "ultrafast_available": true,
+      "launch_source": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    {
+      "id": "openai--gpt-6-2-astra",
+      "label": "GPT-6.2 Astra",
+      "model_ids": [
+        "openai--gpt-6-2-astra"
+      ],
+      "input": 8,
+      "cached_input": 0.4,
+      "output": 40,
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+      "notes": "1.05M context; >272K input: $16 input / $0.80 cache / $60 output; cache write (30m/12h): $10/$20",
+      "pricing_verified_at": "2026-11-18",
+      "pricing_review": "source_checked",
+      "rate_type": "standard",
+      "context_tiers": [
+        {
+          "min_prompt_tokens": 272001,
+          "max_prompt_tokens": 1050000,
+          "input": 16,
+          "cached_input": 0.8,
+          "output": 60
+        }
+      ],
+      "promo_guaranteed_through": null,
+      "promo_ends_on": null,
+      "data_policy": "standard_or_unspecified",
+      "time_tier_utc": null,
+      "cache_write": 10,
+      "cache_write_12h": 20,
+      "ultrafast_available": true,
+      "launch_source": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
     }
   ],
-  "last_updated": "2026-11-11"
+  "last_updated": "2026-11-18"
 }

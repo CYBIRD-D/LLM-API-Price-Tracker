@@ -608,6 +608,30 @@
       "rate_type": "standard",
       "notes": "1M context; implicit caching only; standard list price from Dec 1, 2026 (introductory $2/$0.10/$10 through Nov 30, not separately ranked)",
       "pricing_source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+    },
+    "tencent-openrouter--hy4-flash": {
+      "input": 0.07,
+      "cached_input": 0.003,
+      "output": 0.281,
+      "rate_type": "standard",
+      "notes": "Tencent Cloud normal USD list price (also available as tencent/hy4-flash on OpenRouter); 1M context; currently 50% off: $0.035 input / $0.0015 cache / $0.1405 output",
+      "pricing_source": "https://cloud.tencent.com/tokenhub/hy4-flash-en"
+    },
+    "openai--gpt-6-2-sol": {
+      "input": 2,
+      "cached_input": 0.1,
+      "output": 10,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K input: $4 input / $0.20 cache / $15 output; cache write (30m/12h): $2.50/$5",
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+    },
+    "openai--gpt-6-2-astra": {
+      "input": 8,
+      "cached_input": 0.4,
+      "output": 40,
+      "rate_type": "standard",
+      "notes": "1.05M context; >272K input: $16 input / $0.80 cache / $60 output; cache write (30m/12h): $10/$20",
+      "pricing_source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
     }
   }
 }
